@@ -1,17 +1,16 @@
 #include<stdio.h>
-int mon(int m)
+int mon(int num)
 {
     if (m%10==0){
         return (m/10);
     }
     else if (m%10!=0){
         int rem=m%10;
-        if(rem%5==0){
-            return ((m/10)+(rem/5));
+        if(rem%2==0){
+            return (int(m/10)+(rem/2));
         }
         else{
-        	int rem2=rem%5;
-            return((m/10)+(rem/5)+(rem2/1));
+            return(int(m/10)+int(rem/2)+(num-int(m/10)-int(rem/2)));
         }
     }
 
